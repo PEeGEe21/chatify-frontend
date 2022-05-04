@@ -1,9 +1,14 @@
 import React, {useState} from 'react'
 import { BsEmojiSmileFill } from "react-icons/bs";
-import Picker from "emoji-picker-react";
+// import Picker from "emoji-picker-react";
 import { FaRegSmile } from 'react-icons/fa';
 import { IoMdSend } from "react-icons/io";
 
+import dynamic from "next/dynamic";
+
+const Picker = dynamic(() => import("emoji-picker-react"), {
+    ssr: false,
+  });
 
 
 const ChatInput = ({handleSendMsg}) => {

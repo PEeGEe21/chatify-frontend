@@ -8,11 +8,16 @@ import styles from './Home.module.css'
 import axios from 'axios'
 import { getMessageRoute, sendMessageRoute } from '../components/routes';
 
+// import dynamic from "next/dynamic";
+const ChatInput = dynamic(() => import("../components/ChatInput"), {
+  ssr: false,
+});
 
-const ChatInput = dynamic(
-    () => import('../components/ChatInput'),
-    {ssr: false}
-)
+
+// const ChatInput = dynamic(
+//     () => import('../components/ChatInput'),
+//     {ssr: false}
+// )
 
 // const [ChatInput ] = [
 //     dynamic(() => import('../components/ChatInput')),
