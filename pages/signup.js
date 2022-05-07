@@ -129,8 +129,8 @@ const SignUp = () => {
     <Toaster/>
 
         <div className=" bg-indigo-100 dark:bg-gray-900 lg:py-[6em] h-full mb-0 flex items-center justify-center">
-            <div className="flex flex-col md:flex-row items-center justify-between m-auto max-w-[900px] h-screen md:h-[520px] shadow-lg rounded-lg">
-                <div className="bg-gray-800 w-[100%] md:w-[50%] hidden md:block h-full flex items-center justify-center flex-column relative rounded-none md:rounded-l-lg">
+            <div className="flex flex-col md:flex-row items-center justify-between m-auto max-w-[900px] h-full md:h-[520px] shadow-lg rounded-lg">
+                <div className="bg-gray-800 w-[100%] md:w-[50%] h-full flex items-center justify-center flex-column relative rounded-none md:rounded-l-lg">
                         <img src="/1.jpeg" alt="vrv" className="object-cover h-full w-full rounded-none md:rounded-l-lg"/>
                     <div className={styles.login_pic_overlay}></div>
                 </div>
@@ -174,15 +174,15 @@ const SignUp = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-5">
-                                <span className="w-1/6 border-b border-gray-400 md:w-1/6"></span>
+                                <span className="w-1/5 border-b border-gray-400 md:w-1/5"></span>
 
-                                <span className="text-xs text-gray-500 uppercase dark:text-gray-400">Already have an account? 
+                                <span className="text-xs text-gray-500 uppercase dark:text-gray-400">
                                     <Link href="/login">
-                                        <a  className="hover:underline ml-2">sign in</a>
+                                        <a  className="hover:underline">or sign in</a>
                                     </Link>
                                 </span>
                                 
-                                <span className="w-1/6 border-b border-gray-400 md:w-1/6"></span>
+                                <span className="w-1/5 border-b border-gray-400 md:w-1/5"></span>
                             </div>
                         </form>
     
