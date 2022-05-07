@@ -5,7 +5,7 @@ import { UsersData } from '../../data';
 import { BsCircle, BsFillCircleFill } from "react-icons/bs";
 
 
-export const SideBar = ({showMobileMenu, contacts, changeChat}) => {
+export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
     const [currentSelected, setCurrentSelected] = useState();
     const [displayedSelected, setDisplayedSelected] = useState();
     const [showFriendMenu, setShowFriendMenu] = useState(false);
@@ -69,7 +69,7 @@ export const SideBar = ({showMobileMenu, contacts, changeChat}) => {
 
     } */}
         
-        <aside className="bg-fuchsia-100 w-full md:w-[15rem] lg:w-80 overflow-auto h-[100%] hidden md:block">
+        <aside className="bg-fuchsia-100 w-full md:w-[15rem] lg:w-80 overflow-auto h-[100%] hidden md:block" >
             
             <nav className="sidebar_nav">
                 <ul>
@@ -116,7 +116,7 @@ export const SideBar = ({showMobileMenu, contacts, changeChat}) => {
         </aside>
 
         {showMobileMenu && 
-          <div className={`sm-sidebar ${showMobileMenu===true ? "show" : ""}`} ref={scrollRef}>
+          <div className={`sm-sidebar ${showMobileMenu===true ? "show" : ""}`} ref={useref}>
             <aside className="bg-fuchsia-100 w-full md:w-80 overflow-auto block md:hidden  h-[100%]">
 
 

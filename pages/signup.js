@@ -130,7 +130,7 @@ const SignUp = () => {
 
         <div className=" bg-indigo-100 dark:bg-gray-900 lg:py-[6em] h-full mb-0 flex items-center justify-center">
             <div className="flex flex-col md:flex-row items-center justify-between m-auto max-w-[900px] h-screen md:h-[520px] shadow-lg rounded-lg">
-                <div className="bg-gray-800 w-[100%] md:w-[50%]  h-full flex items-center justify-center flex-column relative rounded-none md:rounded-l-lg">
+                <div className="bg-gray-800 w-[100%] md:w-[50%] hidden md:block h-full flex items-center justify-center flex-column relative rounded-none md:rounded-l-lg">
                         <img src="/1.jpeg" alt="vrv" className="object-cover h-full w-full rounded-none md:rounded-l-lg"/>
                     <div className={styles.login_pic_overlay}></div>
                 </div>

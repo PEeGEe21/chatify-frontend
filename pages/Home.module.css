@@ -8,10 +8,12 @@
 
 }
 
+
+
 .inner_container{
   padding: 0 2rem;
   overflow-y: scroll;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   height: 100%;
   scroll-behavior: smooth;
 
@@ -192,6 +194,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  width: auto;
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -247,6 +250,17 @@
 
   .footer {
     bottom: 0px;
+  
+  }
+
+  .main {
+    padding: 1rem 0 8rem 0;
+  
+  }
+
+  .inner_box {
+  
+    padding-top: 20px;
   
   }
 

@@ -21,6 +21,7 @@ import Welcome from "../welcome";
 const Layout = ({children}) => {
   const router = useRouter();
   const socket = useRef();
+  const ref = useRef()
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   // const scrollRef = useRef();
@@ -181,6 +182,21 @@ const Layout = ({children}) => {
       // console.log("workinggggg")
   }
 
+    useEffect(()=>{
+    const handler = (e) => {
+      if (showMobileMenu && ref.current && !ref.current.contains(e.target)){
+        setShowMobileMenu(false);
+
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+    document.addEventListener("touchstart", handler);
+    return() => {
+      document.removeEventListener("mousedown", handler);
+      document.removeEventListener("touchstart", handler);
+    };
+  }, [showMobileMenu]);
 
   return (
         <>
@@ -200,7 +216,7 @@ const Layout = ({children}) => {
 
           <Navbar handleShowMobileMenu={handleShowMobileMenu} currentUser={currentUser} currentUserName={currentUserName} currentUserImage={currentUserImage}/>
           <div className="flex flex-col md:flex-row flex-1 full_wrapper">
-            <SideBar showMobileMenu={showMobileMenu} contacts={contacts} changeChat={handleChatChange}/>
+            <SideBar showMobileMenu={showMobileMenu} contacts={contacts} changeChat={handleChatChange} useref={ref}/>
             
             <main className="flex-1 mb-5">
                 {currentChat === undefined ? (
