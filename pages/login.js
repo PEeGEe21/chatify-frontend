@@ -118,9 +118,9 @@ const Login = () => {
   return (
     <>
     <Toaster />
-        <div className=" bg-indigo-100 dark:bg-gray-900 lg:py-[6em] h-screen mb-0 ">
+        <div className=" bg-indigo-100 dark:bg-gray-900 lg:py-[6em] mb-0 ">
             <div className="flex flex-col md:flex-row items-center justify-between m-auto max-w-[900px] h-full md:h-[500px] shadow-lg rounded-lg">
-                <div className="bg-gray-800 w-[100%] md:w-[50%] hidden md:block h-full flex items-center justify-center flex-column relative rounded-none md:rounded-l-lg">
+                <div className="bg-gray-800 w-[100%] md:w-[50%]  h-full flex items-center justify-center flex-column relative rounded-none md:rounded-l-lg">
                         <img src="/6.jpeg" alt="vrv" className="object-cover h-full w-full rounded-none md:rounded-l-lg"/>
                     <div className={styles.login_pic_overlay}></div>
                 </div>
