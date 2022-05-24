@@ -170,6 +170,11 @@ const SignUp = () => {
                             </div>
 
                             <div className="flex justify-center items-center mt-6">
+                            {/* <button class="group relative inline-flex border border-red-600 focus:outline-none mt-6" href="/docs/starter-kits">
+                                <span class="w-full inline-flex items-center justify-center self-stretch px-6 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
+                                    Continue
+                                </span>
+                            </button> */}
                                 <button className="px-6 py-2 leading-5 text-sm text-white transition-colors duration-200 transform bg-indigo-700 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-gray-600 w-full h-10" onClick={(e) => handleSubmit}>Continue</button>
                             </div>
 
