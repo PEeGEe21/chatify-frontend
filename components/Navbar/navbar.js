@@ -197,7 +197,7 @@ export const Navbar = ({handleShowMobileMenu, currentUserImage, currentUserName,
                         </button> */}
 
 
-            <button type="button" className="relative z-10 flex items-center p-2 text-sm text-gray-600 bg-white border border-transparent rounded-md focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opa    city-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:text-white dark:bg-gray-800 focus:outline-none "  aria-label="toggle profile dropdown" data-dropdown-toggle="menu-dropdown" onClick={handleShow}>
+            <button type="button" className="relative flex items-center p-2 text-sm text-gray-600 bg-white border border-transparent rounded-md focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opa    city-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:text-white dark:bg-gray-800 focus:outline-none "  aria-label="toggle profile dropdown" data-dropdown-toggle="menu-dropdown" onClick={handleShow}>
                             <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                                 {/* <img src="/users/avatar-1.png" className="object-cover w-full h-full" alt="avatar"/> */}
                                 <img src={currentUserImage ? `data:image/svg+xml;base64,${currentUserImage}` : `/users/default.jpg`} alt="" />
