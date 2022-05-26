@@ -196,8 +196,8 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
 
         </aside>
 
-        {/* {showMobileMenu && ref={useref} */}
-          <div className={`sm-sidebar ${showMobileMenu===true ? "show" : ""}`} >
+        {/* {showMobileMenu &&  */}
+          <div className={`sm-sidebar ${showMobileMenu===true ? "show" : ""}`} ref={useref}>
             <aside className="bg-fuchsia-100 w-full md:w-80 overflow-auto block md:hidden  h-[100%]">
 
 
