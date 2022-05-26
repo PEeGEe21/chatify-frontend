@@ -37,17 +37,17 @@ const ChatInput = ({handleSendMsg}) => {
     <>
         <div className="w-full h-full px-2">
             <form className="flex items-center justify-between w-full h-full relative" onSubmit={(event) => sendChat(event)}>
-                <input type="text" className=" w-[90%] h-10 md:h-14 rounded-md" onChange={(e) => setMsg(e.target.value)}
+                <input type="text" className=" w-[80%] md:w-[90%] h-10 md:h-14 rounded-md" onChange={(e) => setMsg(e.target.value)}
           value={msg}/>
 
-                <div className="button-container mx-2">
+                <div className="button-container mx-2 hidden md:block">
                     <div className="emoji">
                     <FaRegSmile onClick={handleEmojiPickerhideShow} className="hover:bg-gray-300 rounded-lg" />
                     {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
                     </div>
                 </div>
 
-                <button type="submit" className="w-[10%] bg-indigo-600 h-10 md:h-14  text-white transition-colors duration-300 transform dark:text-white rounded-md flex items-center justify-center" onClick={(event) => sendChat(event)}><span className="hidden lg:block text-sm">Send</span> <FiSend className="ml-0 lg:ml-1"/></button>
+                <button type="submit" className="w-[20%] md:w-[10%] bg-indigo-600 h-10 md:h-14  text-white transition-colors duration-300 transform dark:text-white rounded-md flex items-center justify-center" onClick={(event) => sendChat(event)}><span className="hidden lg:block text-sm">Send</span> <FiSend className="ml-0 lg:ml-1"/></button>
             </form>
         </div>
     

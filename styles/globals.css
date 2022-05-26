@@ -285,14 +285,14 @@ aside::-webkit-scrollbar {
   /* background: #000; */
   /* opacity: 0.9; */
   z-index: 999;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.75s ease-in-out;
   
 }
 
 .sm-sidebar.show{
   width: 60%;
-  transition: all 0.4s ease-in-out;
-  
+  transition: all 0.75s ease-in-out;
+
 
 }
 
