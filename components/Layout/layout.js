@@ -14,6 +14,9 @@ import Login from "../../pages/login";
 import axios from 'axios'
 import Chat from '../../pages/chat'
 import Welcome from "../welcome";
+import TouchEvent from '../TouchEvent';
+
+
 // import { Chat } from "../../pages/chat";
 
 
@@ -181,6 +184,37 @@ const Layout = ({children}) => {
 
       // console.log("workinggggg")
   }
+
+  useEffect(()=>{
+    let touchEvent = null;
+
+    document.addEventListener('touchstart', (event)=>{
+        touchEvent = new TouchEvent(event);
+    });
+
+    document.addEventListener('touchend', handleSwipe);
+
+    function handleSwipe(event){
+        if(!touchEvent){
+            return;
+        }
+
+        touchEvent.setEndEvent(event);
+
+        // if(touchEvent.isSwipeRight()){
+        //   setShowMobileMenu(showMobileMenu === true)
+        //   console.log("swipe right --- sidebar opennn")
+
+        // }
+        
+        if (touchEvent.isSwipeRight()){
+          setShowMobileMenu(!showMobileMenu)
+          console.log("swipe left --- sidebar close")
+        }
+
+        touchEvent = null
+    }
+}, [showMobileMenu])
 
     useEffect(()=>{
     const handler = (e) => {

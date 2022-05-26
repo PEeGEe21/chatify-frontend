@@ -3,17 +3,98 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 import { UsersData } from '../../data';
 import { BsCircle, BsFillCircleFill } from "react-icons/bs";
+import TouchEvent from '../TouchEvent';
 
 
 export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
     const [currentSelected, setCurrentSelected] = useState();
     const [displayedSelected, setDisplayedSelected] = useState();
     const [showFriendMenu, setShowFriendMenu] = useState(false);
+    // const [showMenu, setShowMenu] = useState(false);
+
+
     const handleShowFriendMenu= () =>{
         setShowFriendMenu(!showFriendMenu)
       }
+
       const ref = useRef();
-    const scrollRef = useRef()
+    const scrollRef = useRef();
+
+    // useEffect(()=>{
+    //     let touchEvent = null;
+
+    //     document.addEventListener('touchstart', (event)=>{
+    //         touchEvent = new TouchEvent(event);
+    //     });
+
+    //     document.addEventListener('touchend', handleSwipe);
+
+    //     function handleSwipe(event){
+    //         if(!touchEvent){
+    //             return;
+    //         }
+
+    //         touchEvent.setEndEvent(event);
+
+    //         if(touchEvent.isSwipeRight()){
+    //             setShowMenu(showMobileMenu)
+
+    //         }else if (touchEvent.isSwipeLeft()){
+    //             console.log("Swipe Left works")
+
+    //         }
+
+    //         touchEvent = null
+    //     }
+    // })
+    
+    // useEffect(()=>{
+
+    //     document.addEventListener('touchstart', function (event) {
+    //         var touchstartX = event.changedTouches[0].screenX;
+    //         var touchstartY = event.changedTouches[0].screenY;
+    
+
+    //     }, true);
+        
+    //     document.addEventListener('touchend', function (event) {
+    //         var touchendX = event.changedTouches[0].screenX;
+    //         var touchendY = event.changedTouches[0].screenY;
+    //     }, true);
+        
+        
+    //     function handleGesture() {
+    //         if (touchendX < touchstartX) {
+    //             console.log('Swiped Left');
+    //         }
+        
+    //         if (touchendX > touchstartX) {
+    //             console.log('Swiped Right');
+    //         }
+        
+    //         if (touchendY < touchstartY) {
+    //             console.log('Swiped Up');
+    //         }
+        
+    //         if (touchendY > touchstartY) {
+    //             console.log('Swiped Down');
+    //         }
+        
+    //         if (touchendY === touchstartY) {
+    //             console.log('Tap');
+    //         }
+    //     }
+
+    //   },[]);
+
+
+    
+    
+    
+    
+    
+    
+
     
     const menuItems = [
         {
@@ -115,8 +196,8 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
 
         </aside>
 
-        {showMobileMenu && 
-          <div className={`sm-sidebar ${showMobileMenu===true ? "show" : ""}`} ref={useref}>
+        {/* {showMobileMenu && ref={useref} */}
+          <div className={`sm-sidebar ${showMobileMenu===true ? "show" : ""}`} >
             <aside className="bg-fuchsia-100 w-full md:w-80 overflow-auto block md:hidden  h-[100%]">
 
 
@@ -282,7 +363,7 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
           </div>
 
 
-        }
+        {/* } */}
     </>
   )
 }
