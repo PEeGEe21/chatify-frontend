@@ -201,10 +201,12 @@ const Layout = ({children}) => {
 
         touchEvent.setEndEvent(event);
 
-        if(touchEvent.isSwipeLeft()){
-          setShowMobileMenu(!showMobileMenu)
-          console.log("swipe right --- sidebar opennn")
-        }else if (touchEvent.isSwipeRight()){
+        // if(touchEvent.isSwipeLeft()){
+        //   setShowMobileMenu(!showMobileMenu)
+        //   console.log("swipe right --- sidebar opennn")
+        // }
+        
+        if (touchEvent.isSwipeRight()){
           setShowMobileMenu(!showMobileMenu)
           console.log("swipe left --- sidebar close")
         }
