@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import { UsersData } from '../../data';
-import { BsCircle, BsFillCircleFill } from "react-icons/bs";
+import { BsCircle, BsFillCircleFill, BsSearch } from "react-icons/bs";
 import TouchEvent from '../TouchEvent';
 
 
@@ -146,19 +146,19 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
 
     {/* {showMobileMenu && 
     
-    
+    bg-fuchsia-200
 
     } */}
         
-        <aside className="bg-fuchsia-100 w-full md:w-[15rem] lg:w-80 overflow-auto h-[100%] hidden md:block" >
+        <aside className="bg-[#151515] w-full md:w-[15rem] lg:w-80 overflow-auto h-[100%] hidden md:block" >
             
             <nav className="sidebar_nav">
-                <ul>
+                {/* <ul>
                 {menuItems.map(({ href, title }) => (
                     <li className='m-2' key={title}>
                     <Link href={href}>
                         <a
-                        className={`flex p-2 bg-fuchsia-200 rounded hover:bg-fuchsia-400 cursor-pointer ${router.asPath === href && 'bg-fuchsia-600 text-white'}`}
+                        className={`flex p-2 bg-[#1b1b1d] rounded hover:bg-fuchsia-400 cursor-pointer ${router.asPath === href && 'bg-fuchsia-600 text-white'}`}
                         >
                         {title}
                         </a>
@@ -166,7 +166,14 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
                     </li>
                 ))}
                 </ul>
-                <hr/>
+                <hr/> */}
+                <div className="px-2 py-2">
+                        <form className="flex items-center justify-center border-b border-[#5e5e5e80] h-[50px]">
+                            <input type="search" placeholder="search user" className="text-sm h-full block w-full px-4 py-2 text-white bg-transparent border-0  focus:border-none  focus:border-0 focus-within:outline-none focus:outline-none" />
+                            <button className="px-6 py-2 leading-5 text-md text-white transition-colors duration-200 transform  rounded-sm focus:outline-none  h-full border-0" type="submit"><BsSearch className=" h-full text-gray-500"/></button>
+                        </form>
+
+                </div>
           
 
                 <ul>
@@ -176,7 +183,7 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
                     {/* <Link href={`/users/${user._id}/${slugify([user.username])}`}> */}
                     {/* <Link href={`/${encodeURIComponent(name)}.js`}> */}
                         <a
-                        className={`flex p-2 bg-fuchsia-200 rounded hover:bg-fuchsia-400 cursor-pointer items-center justify-start relative transition delay-150 ease-in-out duration-300 ${index === currentSelected ? 'bg-fuchsia-600 text-white' : ''}`} 
+                        className={`flex p-2 bg-[#1b1b1d] rounded hover:bg-fuchsia-400 cursor-pointer text-white items-center justify-start relative transition delay-150 ease-in-out duration-300 ${index === currentSelected ? 'bg-fuchsia-600 text-white' : ''}`} 
                         onClick={()=>changeCurrentChat({index, user})}
                         >
                             
@@ -196,14 +203,14 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
 
         </aside>
 
-        {/* {showMobileMenu &&  */}
-          <div className={`sm-sidebar ${showMobileMenu===true ? "show" : ""}`} ref={useref}>
-            <aside className="bg-fuchsia-100 w-full md:w-80 overflow-auto block md:hidden  h-[100%]">
+        {/* {showMobileMenu &&  bg-fuchsia-100 */}
+          <div className={`sm-sidebar  block md:hidden ${showMobileMenu===true ? "show" : ""}`} ref={useref}>
+            <aside className="bg-[#151515] w-full md:w-80 overflow-auto block md:hidden  h-[100%]">
 
 
                     {displayedSelected ? 
 
-                      <div className="flex md:items-center md:justify-between px-2 py-2 border-b">
+                      <div className="flex md:items-center md:justify-between px-2 py-2 border-b border-[#5e5e5e80]">
                           <div className="flex items-center justify-between">
                               <div className="relative inline-block ">
 
@@ -306,23 +313,30 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
 
                       :
 
-                      <div className="text-xl font-semibold text-gray-700 px-2 py-3 border-b">
+                      <div className="text-xl font-semibold text-gray-700 px-2 py-3 ">
                         <Link href="/">
-                        <a className="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">
-                            <img src="/logo.svg"/>
+                        <a className="text-2xl font-bold text-gray-800 transition-colors duration-200 transform  lg:text-3xl hover:text-gray-700 ">
+                            <img src="/logo-white.svg"/>
                         </a>
 
                         </Link>
                     </div>
                   }
             <nav className="sidebar_nav">
+                <div className="px-2 py-2">
+                        <form className="flex items-center justify-center border-b border-[#5e5e5e80] h-[50px]">
+                            <input type="search" placeholder="search user" className="text-sm h-full block w-full px-4 py-2 text-white bg-transparent border-0  focus:border-none  focus:border-0 focus-within:outline-none focus:outline-none" />
+                            <button className="px-6 py-2 leading-5 text-md text-white transition-colors duration-200 transform  rounded-sm focus:outline-none  h-full border-0" type="submit"><BsSearch className=" h-full text-gray-500"/></button>
+                        </form>
+
+                </div>
 
                 <ul>
                 {menuItems.map(({ href, title }) => (
                     <li className='m-2' key={title}>
                     <Link href={href}>
                         <a
-                        className={`flex p-2 bg-fuchsia-200 rounded hover:bg-fuchsia-400 cursor-pointer ${router.asPath === href && 'bg-fuchsia-600 text-white'}`}
+                        className={`flex p-2 bg-[#1b1b1d] text-white rounded hover:bg-fuchsia-400 cursor-pointer ${router.asPath === href && 'bg-fuchsia-600 text-white'}`}
                         >
                         {title}
                         </a>
@@ -330,7 +344,7 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
                     </li>
                 ))}
                 </ul>
-                <hr/>
+                
 
 
                 <ul>
@@ -340,7 +354,7 @@ export const SideBar = ({showMobileMenu, contacts, changeChat, useref}) => {
                     {/* <Link href={`/users/${user._id}/${slugify([user.username])}`}> */}
                     {/* <Link href={`/${encodeURIComponent(name)}.js`}> */}
                         <a
-                        className={`flex p-2 bg-fuchsia-200 rounded hover:bg-fuchsia-400 cursor-pointer items-center justify-start relative transition delay-150 ease-in-out duration-300 ${index === currentSelected ? 'bg-fuchsia-600 text-white' : ''}`} 
+                        className={`flex p-2 bg-[#1b1b1d] text-white rounded hover:bg-fuchsia-400 cursor-pointer items-center justify-start relative transition delay-150 ease-in-out duration-300 ${index === currentSelected ? 'bg-fuchsia-600 text-white' : ''}`} 
                         onClick={()=>changeCurrentChat({index, user})}
                         >
                             

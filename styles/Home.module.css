@@ -1,7 +1,8 @@
 .container {
   padding: 0 2rem;
   overflow-y: scroll;
-  background: #fff;
+  /* background: #fff; */
+
   max-height: 100vh;
   scroll-behavior: smooth;
   /* max-height: 630px; */
@@ -36,7 +37,9 @@
   width: 100%;
   max-width: 967px;
 
-  background-color: rgb(250 232 255);
+  /* background-color: rgb(250 232 255); */
+  background: #1b1b1d;
+
 
 }
 

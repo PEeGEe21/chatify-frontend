@@ -51,14 +51,14 @@ export const Navbar = ({handleShowMobileMenu, currentUserImage, currentUserName,
   return (
       <>
 
-    <nav className="bg-white shadow dark:bg-gray-800 border-b nav_header">
+    <nav className="bg-[#151515] shadow dark:bg-gray-800  nav_header">
         <div className="container px-6 py-3 mx-auto">
             <div className="md:flex md:items-center md:justify-between">
                 <div className="flex items-center justify-between">
                     <div className="text-xl font-semibold text-gray-700">
                         <Link href="/">
                         <a className="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">
-                            <img src="/logo.svg"/>
+                            <img src="/logo-white.svg"/>
                         </a>
 
                         </Link>
@@ -161,7 +161,12 @@ export const Navbar = ({handleShowMobileMenu, currentUserImage, currentUserName,
                     <div className="flex flex-col -mx-4 md:flex-row md:items-center md:mx-8 hidden md:block">
                         {/* <a href="#" className="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700">Join Slack</a> */}
                         {/* <a href="#" className="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700">Browse Topics</a>*/}
-                        <Link href="/login">
+                        {
+                            currentUser ? ''
+
+                         : 
+                            <>
+                            <Link href="/login">
                             <a className="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700">Log In</a>
 
                         </Link>
@@ -169,6 +174,8 @@ export const Navbar = ({handleShowMobileMenu, currentUserImage, currentUserName,
                         <Link href="/signup">
                             <a  className="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700">Sign Up</a> 
                         </Link>
+                        </>
+                        }
                     </div>
 
                     <div className="flex items-center mt-4 md:mt-0 hidden md:inline-flex">
@@ -197,7 +204,7 @@ export const Navbar = ({handleShowMobileMenu, currentUserImage, currentUserName,
                         </button> */}
 
 
-            <button type="button" className="relative flex items-center p-2 text-sm text-gray-600 bg-white border border-transparent rounded-md focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opa    city-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:text-white dark:bg-gray-800 focus:outline-none "  aria-label="toggle profile dropdown" data-dropdown-toggle="menu-dropdown" onClick={handleShow}>
+            <button type="button" className="relative flex items-center p-2 text-sm text-white/50 bg-[#1b1b1d] border border-transparent rounded-md focus:border-[#5e5e5e] focus:ring-none focus:ring-blue-300 dark:focus:ring-blue-400  dark:text-white dark:bg-gray-800 focus:outline-none "  aria-label="toggle profile dropdown" data-dropdown-toggle="menu-dropdown" onClick={handleShow}>
                             <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                                 {/* <img src="/users/avatar-1.png" className="object-cover w-full h-full" alt="avatar"/> */}
                                 <img src={currentUserImage ? `data:image/svg+xml;base64,${currentUserImage}` : `/users/default.jpg`} alt="" />

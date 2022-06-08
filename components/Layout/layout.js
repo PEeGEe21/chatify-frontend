@@ -251,7 +251,7 @@ const Layout = ({children}) => {
           <div className="flex flex-col md:flex-row flex-1 full_wrapper">
             <SideBar showMobileMenu={showMobileMenu} contacts={contacts} changeChat={handleChatChange} useref={ref}/>
             
-            <main className="flex-1 mb-5">
+            <main className="flex-1">
                 {currentChat === undefined ? (
                   <Welcome currentUserName={currentUserName} />
                     ) : ( 

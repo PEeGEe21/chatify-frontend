@@ -20,33 +20,32 @@ export default function Welcome({currentUserName}) {
     <>
 
     {/* <h1>welcome </h1> */}
-    <div className="border-t">
-      
-    </div>
+    
 
     <div className={styles.container}>
 
-      <main className={styles.main}>
+    <div className={`inner-container ${styles.inner_container}`}>
+              <main className={styles.main}>
         
 
-        <div className={styles.welcome_grid }>
-          <h1 className={styles.title}>
-            Hey, {currentUserName}!
-          </h1>
+          <div className={styles.welcome_grid }>
+            <h1 className={styles.title}>
+              Hey, {currentUserName}!
+            </h1>
 
-          <p className={styles.description}>
-            Get started by selecting a chat
-          </p>
+            <p className={styles.description}>
+              Get started by selecting a chat
+            </p>
+
+
+            
           
-         
-         
-        </div>
-      </main>
+          
+          </div>
+        </main>
+      </div>
 
-      
-    </div>
-
-      <footer className={` footer`}>
+      <footer className={styles.footer}>
         <a
           href="https://peegee.netlify.app"
           target="_blank" 
@@ -58,6 +57,10 @@ export default function Welcome({currentUserName}) {
           </span>
         </a>
       </footer>
+      
+    </div>
+
+      
     </>
   )
 }
